@@ -1,0 +1,45 @@
+{
+  "rules": [
+    {
+      "name": "Ensure Environment Variables",
+      "description": "Check that required environment variables (MONGO_URI, DATABASE_PASSWORD, etc.) are properly set and loaded.",
+      "type": "env"
+    },
+    {
+      "name": "MongoDB Connection Handling",
+      "description": "Ensure MongoDB connection uses proper authentication, error handling, and logging.",
+      "type": "database",
+      "technology": "mongodb"
+    },
+    {
+      "name": "Secure API Endpoints",
+      "description": "Verify that API endpoints handle errors correctly, return appropriate status codes, and use secure headers.",
+      "type": "api",
+      "framework": "express"
+    },
+    {
+      "name": "Smart Contract Interaction",
+      "description": "Validate that the frontend correctly interacts with the Ethereum smart contract using Wagmi, RainbowKit, and Viem.",
+      "type": "blockchain",
+      "network": "sepolia"
+    },
+    {
+      "name": "Frontend UI Consistency",
+      "description": "Ensure that the frontend UI follows the provided Figma design closely and is fully responsive.",
+      "type": "ui",
+      "framework": "nextjs"
+    },
+    {
+      "name": "NFT Minting Process",
+      "description": "Check that the minting flow follows all necessary steps: checking ID, storing metadata, and submitting a transaction.",
+      "type": "feature",
+      "component": "minting"
+    },
+    {
+      "name": "NFT Gallery Display",
+      "description": "Verify that the gallery correctly fetches and displays NFTs, handling empty states gracefully.",
+      "type": "feature",
+      "component": "gallery"
+    }
+  ]
+}

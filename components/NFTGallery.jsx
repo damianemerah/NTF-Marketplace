@@ -63,18 +63,29 @@ export default function NFTGallery() {
     queryFn: async () => {
       if (!address) return [];
       try {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/nft/gallery/${address}`
-        );
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+        console.log("API URL:🎈🎈", apiUrl); // Debug log
+
+        const response = await fetch(`${apiUrl}/api/nft/gallery/${address}`);
+
         if (!response.ok) {
+          const errorText = await response.text();
+          console.error("Response error:", {
+            status: response.status,
+            statusText: response.statusText,
+            body: errorText,
+          });
           throw new Error(`Failed to fetch NFTs: ${response.statusText}`);
         }
+
         const data = await response.json();
         if (!data.success) {
+          console.error("API Error:", data);
           throw new Error("API response was not successful");
         }
         return data.data;
       } catch (error) {
+        console.error("Fetch error:", error);
         toast.error(`Error fetching NFTs: ${error.message}`);
         throw error;
       }

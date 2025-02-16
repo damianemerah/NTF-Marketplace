@@ -24,6 +24,13 @@ A modern NFT (Non-Fungible Token) marketplace built with Next.js, allowing users
 - **Notifications**: React Hot Toast
 - **Backend**: Express.js with MongoDB
 
+## Links
+
+- **Frontend Demo**: [https://ntf-marketplace-delta.vercel.app/](https://ntf-marketplace-delta.vercel.app/)
+- **Backend API**: [https://nft-marketplace-backend-jyzb.onrender.com](https://nft-marketplace-backend-jyzb.onrender.com)
+- **Backend Repository**: [https://github.com/damianemerah/NFT_Marketplace_Backend.git](https://github.com/damianemerah/NFT_Marketplace_Backend.git)
+- **Demo Video**: [Watch on Loom](https://www.loom.com/share/8c544c5b381f4aed88e240d7fe8c84b0?sid=d537a7a0-cbdb-42d1-973a-10e20857d0db)
+
 ## API Routes
 
 ### Frontend URL Parameters

@@ -1,6 +1,6 @@
 "use client";
 
-// UI Components
+import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
@@ -99,7 +99,9 @@ export default function NFTMarketplace() {
         </div>
 
         <MintingForm />
-        <NFTGallery />
+        <Suspense fallback={<div>Loading...</div>}>
+          <NFTGallery />
+        </Suspense>
       </main>
     </div>
   );

@@ -64,17 +64,10 @@ export default function NFTGallery() {
       if (!address) return [];
       try {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-        console.log("API URL:🎈🎈", apiUrl); // Debug log
 
         const response = await fetch(`${apiUrl}/api/nft/gallery/${address}`);
 
         if (!response.ok) {
-          const errorText = await response.text();
-          console.error("Response error:", {
-            status: response.status,
-            statusText: response.statusText,
-            body: errorText,
-          });
           throw new Error(`Failed to fetch NFTs: ${response.statusText}`);
         }
 

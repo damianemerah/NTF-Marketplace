@@ -125,7 +125,7 @@ export function MintingForm() {
     }
   };
 
-  if (mintSuccess && mintedNFT) {
+  if (!mintSuccess && !mintedNFT) {
     return (
       <Card className="p-[33px] text-left max-w-[576px] mx-auto bg-[#111827]/50 border border-[#10B981] backdrop-blur-lg">
         <CardContent className="p-8 text-center">
@@ -139,34 +139,36 @@ export function MintingForm() {
             Your NFT has been created and added to your collection
           </p>
 
-          <div className="rounded-xl overflow-hidden mb-8 ">
-            <Image
-              src={mintedNFT?.imageUrl}
-              alt={mintedNFT?.name}
-              width={462}
-              height={256}
-              className="w-full h-56 object-cover"
-            />
-          </div>
-          <div className="text-left mb-6">
-            <div className="mb-2">
-              <p className="text-sm text-[#9CA3AF]">NFT Name</p>
-              <h3 className="font-semibold text-[#D1D5DB]">
-                {mintedNFT?.name}
-              </h3>
+          <div className="bg-[#1F2937]/50 p-6 rounded-xl">
+            <div className="rounded-xl overflow-hidden mb-8 ">
+              <Image
+                src={mintedNFT?.imageUrl}
+                alt={mintedNFT?.name}
+                width={462}
+                height={256}
+                className="w-full h-56 object-cover"
+              />
             </div>
-            <div className="mb-2">
-              <p className="text-sm text-[#9CA3AF]">Description</p>
-              <p className="text-[#D1D5DB]">{mintedNFT?.description}</p>
-            </div>
-            <div>
-              <p className="text-sm text-[#9CA3AF]">NFT ID</p>
-              <p className="text-[#8B5CF6]">{mintedNFT?.id}</p>
+            <div className="text-left mb-6">
+              <div className="mb-2">
+                <p className="text-sm text-[#9CA3AF]">NFT Name</p>
+                <h3 className="font-semibold text-[#D1D5DB]">
+                  {mintedNFT?.name}
+                </h3>
+              </div>
+              <div className="mb-2">
+                <p className="text-sm text-[#9CA3AF]">Description</p>
+                <p className="text-[#D1D5DB]">{mintedNFT?.description}</p>
+              </div>
+              <div>
+                <p className="text-sm text-[#9CA3AF]">NFT ID</p>
+                <p className="text-[#8B5CF6]">{mintedNFT?.id}</p>
+              </div>
             </div>
           </div>
         </CardContent>
         <CardFooter className="p-6 pt-0">
-          <div className="grid grid-cols-2 gap-4 w-full bg-[#1F2937]">
+          <div className="grid grid-cols-2 gap-4 w-full ">
             <Button
               onClick={() => {
                 toast.info("Share functionality coming soon!");

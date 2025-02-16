@@ -88,7 +88,7 @@ export function MintingForm() {
       if (!response.ok) throw new Error("Failed to store NFT metadata");
 
       // 3. Mint NFT with metadata URL
-      const metadataUrl = `${window.location.origin}/api/nft/${uniqueId}`;
+      const metadataUrl = `${window.location.origin}/api/nft?id=${uniqueId}`;
 
       const hash = await writeContractAsync({
         address: contractAddress,

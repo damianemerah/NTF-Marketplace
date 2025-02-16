@@ -1,12 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      "developers.moralis.com",
-      "hebbkx1anhila5yf.public.blob.vercel-storage.com",
-      "www.larvalabs.com",
-      "drive.google.com",
-    ],
+    domains: ["imgur.com", "i.imgur.com"],
   },
 
   webpack(config) {

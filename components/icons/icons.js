@@ -4,9 +4,6 @@ import Wallet from "@/public/icons/wallet.svg";
 import Rocket from "@/public/icons/rocket.svg";
 import Share from "@/public/icons/share.svg";
 import Checkmark from "@/public/icons/checkmark.svg";
-import File from "@/public/file.svg";
-import Globe from "@/public/globe.svg";
-import Window from "@/public/window.svg";
 
 // Export all icons
-export { Box, Play, Wallet, Rocket, Share, Checkmark, File, Globe, Window };
+export { Box, Play, Wallet, Rocket, Share, Checkmark };

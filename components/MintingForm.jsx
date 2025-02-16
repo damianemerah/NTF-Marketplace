@@ -125,7 +125,7 @@ export function MintingForm() {
     }
   };
 
-  if (!mintSuccess && !mintedNFT) {
+  if (mintSuccess && mintedNFT) {
     return (
       <Card className="p-[33px] text-left max-w-[576px] mx-auto bg-[#111827]/50 border border-[#10B981] backdrop-blur-lg">
         <CardContent className="p-8 text-center">

@@ -47,13 +47,14 @@ A modern NFT (Non-Fungible Token) marketplace built with Next.js, allowing users
 #### 1. Mint NFT
 
 - **Endpoint**: `POST /api/nft/mint`
+- **Image domian**: Imgur👇
 - **Description**: Creates a new NFT with metadata storage
 - **Request Body**:
   ```json
   {
     "name": "NFT Name",
     "description": "Description of the NFT",
-    "imageUrl": "URL of the NFT image",
+    "imageUrl": "https://i.imgur.com/5rSsFJX.jpeg",
     "nftId": "Unique NFT ID",
     "walletAddress": "User's wallet address"
   }
